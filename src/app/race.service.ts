@@ -7,7 +7,13 @@ export class RaceService {
   constructor() { }
 
   list() {
-    const races: Array<RaceModel> = [{name: 'Tokyo'}, {name: 'Paris'}];
+    const races: Array<RaceModel> = [
+      {name: 'Lyon'},
+      {name: 'Los Angeles'},
+      {name: 'Sydney'},
+      {name: 'Tokyo'},
+      {name: 'Casablanca'}
+    ];
     return races;
   }
 
