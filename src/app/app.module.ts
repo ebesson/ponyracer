@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { RaceService } from './race.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -34,7 +35,7 @@ import { RegisterComponent } from './register/register.component';
     RouterModule.forRoot(ROUTES),
     ReactiveFormsModule,
   ],
-  providers: [RaceService],
+  providers: [RaceService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
