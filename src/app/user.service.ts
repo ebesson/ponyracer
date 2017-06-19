@@ -15,4 +15,10 @@ export class UserService {
     return this.http.post(baseUrl, user)
       .map(res => res.json());
   }
+
+  authenticate(credentials: {login: string; password: string}) {
+    const baseUrl = 'http://ponyracer.ninja-squad.com/api/users/authentication';
+    return this.http.post(baseUrl, credentials)
+      .map(res => res.json());
+  }
 }

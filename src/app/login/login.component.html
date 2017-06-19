@@ -1,0 +1,13 @@
+<h1>Log in</h1>
+<form (ngSubmit)="authenticate()">
+
+  <div>
+    <label>Login</label><input name="login" type="text" [(ngModel)]="credentials.login">
+  </div>
+  <div>
+    <label>Password</label><input name="password" type="password" [(ngModel)]="credentials.password">
+  </div>
+  
+  <button class="btn btn-primary" [disabled]="!isFormValid()" type="submit">Let’s go!</button>
+  <div class="alert alert-danger " [hidden]="!authenticationFailed">Nope, try again</div>
+</form>
