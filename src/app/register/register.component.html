@@ -1,0 +1,23 @@
+<div class="col-md-4 offset-md-4">
+  <h2>Register</h2>
+  <div class="row">
+      <form (ngSubmit)="register()" [formGroup]="userForm">
+        <div class="form-group">
+          <label for="login" id="login-label">Login</label>
+          <input class="form-control ng-untouched ng-pristine ng-invalid" type="text" formControlName="login" ngModel required>
+          <div *ngIf="userForm.get('login').hasError('required')">Login is required</div>
+        </div>
+        <div class="form-group">
+          <label for="password" id="password-label">Password</label>
+          <input class="form-control ng-untouched ng-pristine ng-invalid" type="password" formControlName="password" ngModel required>
+          <div *ngIf="userForm.get('password').hasError('required')">Password is required</div>
+        </div>
+        <div class="form-group">
+          <label for="birthYear" id="birthYear-label">Date of birth</label>
+          <input class="form-control ng-untouched ng-pristine ng-invalid" type="number" formControlName="birthYear" ngModel required>
+          <div *ngIf="userForm.get('birthYear').hasError('required')">Birth year is required</div>
+        </div>
+        <button class="btn btn-primary" [disabled]="userForm.invalid" type="submit">Let’s go!</button>
+      </form>
+  </div>
+</div>

@@ -2,11 +2,11 @@
   <button type="button" class="navbar-toggler navbar-toggler-right" (click)="toggleNavbar()">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" routerLink="/">PonyRacer</a>
-  <div id="navbar" class="navbar-collapse" [class.collapse]="navbarCollapsed">
+  <a class="navbar-brand">PonyRacer</a>
+  <div id="navbar" [class.collapse]="navbarCollapsed" class="navbar-collapse">
     <div class="nav navbar-nav mr-auto">
-      <a class="nav-item nav-link" routerLink="/races">Races</a>
+      <a class="nav-item nav-link" href="" routerLink="/" routerLinkActive #route="routerLinkActive">Home</a>
+      <a class="nav-item nav-link" href="" routerLinkActive="selected-menu" routerLink="/races">Races</a>
     </div>
   </div>
 </nav>
-
