@@ -9,4 +9,9 @@
       <a class="nav-item nav-link" href="" routerLinkActive="selected-menu" routerLink="/races">Races</a>
     </div>
   </div>
+  <span class="nav-item navbar-text mr-2">
+    {{ user?.login }}
+    <span class="fa fa-star"></span>
+    {{ user?.money }}
+  </span>
 </nav>
